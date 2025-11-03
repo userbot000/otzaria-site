@@ -110,7 +110,7 @@
               <div class="form-row">
                 <div class="form-group">
                   <label for="phone" class="form-label"
-                    >מספר טלפון <span class="required">*</span></label
+                    >מספר טלפון</label
                   >
                   <input
                     type="tel"
@@ -118,7 +118,6 @@
                     name="phone"
                     class="form-input"
                     placeholder="050-1234567"
-                    required
                   />
                 </div>
 
@@ -204,9 +203,9 @@
                 <span class="material-symbols-outlined why-donate-icon"
                   >cloud</span
                 >
-                <h3 class="why-donate-title">שרתים ותשתיות</h3>
+                <h3 class="why-donate-title">פרסום ותמיכה</h3>
                 <p class="why-donate-text">
-                  תחזוקת שרתים, אחסון ותשתיות טכנולוגיות לשירות מהיר ויציב
+                  עזרו לנו לפרסם את התוכנה לקהלים נוספים ולתחזק קהלת תמיכה יעילה
                 </p>
               </div>
 
@@ -214,7 +213,7 @@
                 <span class="material-symbols-outlined why-donate-icon"
                   >volunteer_activism</span
                 >
-                <h3 class="why-donate-title">חינם לעד</h3>
+                <h3 class="why-donate-title">חינם לגמרי</h3>
                 <p class="why-donate-text">
                   התוכנה תישאר חינמית לחלוטין ונגישה לכל אחד ואחת
                 </p>
@@ -236,12 +235,67 @@
     </footer>
 
     <script>
+      // בדיקת חיבור לאינטרנט
+      function checkInternetConnection() {
+        return navigator.onLine;
+      }
+
+      // הצגת הודעת שגיאה מעוצבת
+      function showErrorMessage(message, icon = 'error') {
+        // יצירת אלמנט הודעה אם לא קיים
+        let errorDiv = document.getElementById('error-message');
+        if (!errorDiv) {
+          errorDiv = document.createElement('div');
+          errorDiv.id = 'error-message';
+          errorDiv.className = 'error-message';
+          errorDiv.style.cssText = `
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.25rem;
+            background-color: #fee;
+            border: 2px solid #f44336;
+            border-radius: 12px;
+            margin-top: 1.5rem;
+            color: #c62828;
+            font-weight: 500;
+          `;
+          document.getElementById('donateForm').appendChild(errorDiv);
+        }
+        
+        errorDiv.innerHTML = `
+          <span class="material-symbols-outlined" style="font-size: 1.75rem; color: #f44336;">${icon}</span>
+          <p style="margin: 0; flex: 1;">${message}</p>
+        `;
+        errorDiv.style.display = 'flex';
+        
+        // הסתרה אוטומטית אחרי 8 שניות
+        setTimeout(() => {
+          errorDiv.style.display = 'none';
+        }, 8000);
+      }
+
       document.getElementById('donateForm').addEventListener('submit', async function(e) {
         e.preventDefault();
+        
+        // בדיקת חיבור לאינטרנט לפני שליחה
+        if (!checkInternetConnection()) {
+          showErrorMessage(
+            'אין חיבור לאינטרנט! אנא בדוק את החיבור שלך ונסה שוב.',
+            'wifi_off'
+          );
+          return;
+        }
         
         const form = e.target;
         const submitBtn = form.querySelector('.form-submit-btn');
         const successMessage = document.getElementById('success-message');
+        const errorMessage = document.getElementById('error-message');
+        
+        // הסתרת הודעות קודמות
+        if (errorMessage) {
+          errorMessage.style.display = 'none';
+        }
         
         // השבת את כפתור השליחה
         submitBtn.disabled = true;
@@ -267,10 +321,38 @@
           }
         } catch (error) {
           console.error('שגיאה בשליחת הטופס:', error);
-          alert('אירעה שגיאה בשליחת הטופס. אנא נסה שוב.');
+          
+          // בדיקה אם השגיאה היא בגלל חיבור לאינטרנט
+          if (!navigator.onLine) {
+            showErrorMessage(
+              'החיבור לאינטרנט אבד במהלך השליחה! אנא בדוק את החיבור ונסה שוב.',
+              'wifi_off'
+            );
+          } else {
+            showErrorMessage(
+              'אירעה שגיאה בשליחת הטופס. אנא נסה שוב מאוחר יותר או צור קשר ישירות דרך נדרים פלוס.',
+              'error'
+            );
+          }
+          
           submitBtn.disabled = false;
           submitBtn.innerHTML = '<span class="material-symbols-outlined">send</span> שלח פרטים';
         }
+      });
+
+      // מעקב אחר שינויים בחיבור לאינטרנט
+      window.addEventListener('online', function() {
+        const errorMessage = document.getElementById('error-message');
+        if (errorMessage && errorMessage.style.display !== 'none') {
+          errorMessage.style.display = 'none';
+        }
+      });
+
+      window.addEventListener('offline', function() {
+        showErrorMessage(
+          'החיבור לאינטרנט אבד! לא ניתן לשלוח את הטופס ללא חיבור לאינטרנט.',
+          'wifi_off'
+        );
       });
     </script>
   </body>

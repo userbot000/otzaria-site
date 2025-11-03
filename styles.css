@@ -22,7 +22,7 @@
     --primary-contrast: #ffffff;
     
     /* צבעי רקע */
-    --background: #fffcf0;
+    --background: #f5f5f5;
     --surface: #ffffff;
     --surface-variant: #f5f5f5;
     
@@ -237,7 +237,7 @@ body {
 /* Features Section */
 .features {
     padding: 5rem 0;
-    background-color: var(--surface);
+    background-color: var(--background);
 }
 
 .section-title {
@@ -262,7 +262,7 @@ body {
 }
 
 .feature-card {
-    background-color: var(--surface);
+    background-color: var(--background);
     padding: 2rem;
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-md);
@@ -310,7 +310,7 @@ body {
 }
 
 .download-card {
-    background-color: var(--surface);
+    background-color: var(--background);
     padding: 2rem 1.5rem;
     border-radius: var(--radius-md);
     text-align: center;
@@ -444,14 +444,14 @@ body {
 }
 
 .about-main {
-    background-color: var(--surface);
+    background-color: var(--background);
     padding: 2.5rem;
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-md);
 }
 
 .about-main-full {
-    background-color: var(--surface);
+    background-color: var(--background);
     padding: 3rem;
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-md);
@@ -511,7 +511,7 @@ body {
 }
 
 .memorial-card {
-    background-color: var(--surface);
+    background-color: var(--background);
     border: 2px solid var(--accent-color);
     border-radius: var(--radius-md);
     padding: 1.5rem;
@@ -644,7 +644,7 @@ body {
 }
 
 .action-card {
-    background-color: var(--surface);
+    background-color: var(--background);
     border-radius: var(--radius-md);
     padding: 1.5rem;
     box-shadow: var(--shadow-md);
@@ -684,7 +684,7 @@ body {
 }
 
 .action-card-edit .action-icon {
-    color: #4caf50;
+    color: #d7ccc8;
 }
 
 .action-card-donate .action-icon {
@@ -728,12 +728,12 @@ body {
 }
 
 .action-button-edit {
-    background-color: #4caf50;
-    color: white;
+    background-color: #d7ccc8;
+    color: #5d4037;
 }
 
 .action-button-edit:hover {
-    background-color: #388e3c;
+    background-color: #bcaaa4;
 }
 
 .donate-buttons {
@@ -925,7 +925,7 @@ body {
 
 /* Quick Donate Options */
 .donate-quick-options {
-    background-color: var(--surface);
+    background-color: var(--background);
     padding: 2.5rem;
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-md);
@@ -990,7 +990,7 @@ body {
 
 /* Donate Form Section */
 .donate-form-section {
-    background-color: var(--surface);
+    background-color: var(--background);
     padding: 2.5rem;
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-md);
@@ -1099,8 +1099,8 @@ body {
     align-items: center;
     gap: 1rem;
     padding: 1.5rem;
-    background-color: #4caf50;
-    color: white;
+    background-color: #d7ccc8;
+    color: #5d4037;
     border-radius: var(--radius-md);
     margin-top: 1rem;
 }
@@ -1111,7 +1111,7 @@ body {
 
 /* Why Donate Section */
 .why-donate-section {
-    background-color: var(--surface);
+    background-color: var(--background);
     padding: 2.5rem;
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-md);
@@ -1300,7 +1300,7 @@ body {
 }
 
 .faq-item {
-    background-color: var(--surface);
+    background-color: var(--background);
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-sm);
     overflow: hidden;
@@ -1694,15 +1694,15 @@ body {
     align-items: center;
     gap: 1rem;
     padding: 1.5rem;
-    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
-    border-right: 4px solid #4caf50;
+    background: linear-gradient(135deg, #f5f5f5 0%, #efebe9 100%);
+    border-right: 4px solid #d7ccc8;
     border-radius: var(--radius-md);
     margin: 1.5rem 0;
 }
 
 .success-box .material-symbols-outlined {
     font-size: 2.5rem;
-    color: #4caf50;
+    color: #a1887f;
 }
 
 .success-box p {
@@ -1772,8 +1772,8 @@ body {
 }
 
 .level-3 .level-badge {
-    background-color: #4caf50;
-    color: white;
+    background-color: #d7ccc8;
+    color: #5d4037;
 }
 
 /* Code Examples */
@@ -2126,12 +2126,12 @@ body {
 }
 
 .help-card {
-    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
-    border-right-color: #4caf50;
+    background: linear-gradient(135deg, #f5f5f5 0%, #efebe9 100%);
+    border-right-color: #d7ccc8;
 }
 
 .help-card .material-symbols-outlined {
-    color: #4caf50;
+    color: #a1887f;
 }
 
 .help-link {
@@ -2139,8 +2139,8 @@ body {
     align-items: center;
     gap: 0.5rem;
     padding: 0.75rem 1.5rem;
-    background-color: #4caf50;
-    color: white;
+    background-color: #d7ccc8;
+    color: #5d4037;
     text-decoration: none;
     border-radius: var(--radius-sm);
     font-weight: 600;
@@ -2149,7 +2149,7 @@ body {
 }
 
 .help-link:hover {
-    background-color: #388e3c;
+    background-color: #bcaaa4;
     transform: translateY(-2px);
     box-shadow: var(--shadow-md);
 }
@@ -2212,5 +2212,284 @@ body {
     .code-block {
         font-size: var(--text-sm);
         padding: 1rem;
+    }
+}
+
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.modal-content {
+    background-color: var(--surface);
+    border-radius: var(--radius-lg);
+    max-width: 800px;
+    width: 90%;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid var(--surface-variant);
+}
+
+.modal-header h2 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--primary-dark);
+    margin: 0;
+}
+
+.modal-close {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: var(--radius-sm);
+    transition: background-color 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-close:hover {
+    background-color: var(--surface-variant);
+}
+
+.modal-close .material-symbols-outlined {
+    font-size: 1.5rem;
+    color: var(--on-surface-variant);
+}
+
+.modal-body {
+    padding: 1.5rem;
+}
+
+.version-section {
+    margin-bottom: 1.75rem;
+}
+
+.version-section:last-of-type {
+    margin-bottom: 0;
+}
+
+.version-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.4rem;
+}
+
+.version-header .material-symbols-outlined {
+    font-size: 1.4rem;
+    color: var(--primary-color);
+}
+
+.version-header h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--on-surface);
+    margin: 0;
+}
+
+.version-badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.version-badge.stable {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+
+.version-badge.dev {
+    background-color: #fff3e0;
+    color: #e65100;
+}
+
+.version-description {
+    color: var(--on-surface-variant);
+    margin-bottom: 1rem;
+    font-size: 0.85rem;
+}
+
+.download-options {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.download-option {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.85rem 1rem;
+    background-color: var(--surface-variant);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.2s ease;
+    border: 2px solid transparent;
+}
+
+.download-option:hover {
+    background-color: var(--surface);
+    border-color: var(--primary-color);
+    box-shadow: var(--shadow-md);
+    transform: translateX(-4px);
+}
+
+.option-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary-light);
+    border-radius: var(--radius-sm);
+    flex-shrink: 0;
+}
+
+.option-icon .material-symbols-outlined {
+    font-size: 1.4rem;
+    color: white;
+}
+
+.option-info {
+    flex: 1;
+}
+
+.option-info h4 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--on-surface);
+    margin: 0 0 0.15rem 0;
+}
+
+.option-info p {
+    font-size: 0.75rem;
+    color: var(--on-surface-variant);
+    margin: 0;
+}
+
+.download-option > .material-symbols-outlined {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    flex-shrink: 0;
+}
+
+.modal-footer {
+    margin-top: 1.25rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--surface-variant);
+}
+
+.modal-footer p {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: var(--on-surface-variant);
+    font-size: 0.8rem;
+    margin: 0;
+}
+
+.modal-footer .material-symbols-outlined {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+}
+
+.modal-footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.modal-footer a:hover {
+    text-decoration: underline;
+}
+
+/* Make download card button look like a link */
+.download-card {
+    background: none;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 95%;
+        max-height: 95vh;
+    }
+
+    .modal-header,
+    .modal-body {
+        padding: 1.5rem;
+    }
+
+    .version-header h3 {
+        font-size: 1.25rem;
+    }
+
+    .download-option {
+        padding: 1rem;
+    }
+
+    .option-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .option-icon .material-symbols-outlined {
+        font-size: 1.5rem;
+    }
+
+    .option-info h4 {
+        font-size: 1rem;
+    }
+
+    .option-info p {
+        font-size: 0.8rem;
     }
 }
